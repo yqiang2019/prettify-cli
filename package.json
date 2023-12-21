@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/yqiang2019/pretty-cli#readme",
   "dependencies": {
+    "commander": "^11.1.0",
     "import-local": "^3.1.0",
-    "npmlog": "^7.0.1"
+    "npmlog": "^7.0.1",
+    "semver": "^7.5.4"
   }
 }
