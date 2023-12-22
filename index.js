@@ -1,1 +1,0 @@
-require('./libs/cli/bin/cli')

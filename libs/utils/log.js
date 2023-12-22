@@ -5,13 +5,14 @@
  * @LastEditTime: 2023-12-21 17:29:12
  * @Description: 
  */
-const log = require('npmlog');
+import log from 'npmlog';
+import isDebug from './isDebug.js';
 
-if(process.argv.includes('--debug') || process.argv.includes('-d')) {
+if(isDebug()) {
     log.level = 'verbose';
 }else {
     log.level = 'info';
 }
 
 log.heading = 'pretty';
-module.exports = log;
+export default log;

@@ -1,11 +1,17 @@
-const commander = require('commander');
-const semver = require('semver');
-const pkg = require('../../../package.json');
-const createInitCommand = require('../../command/initCommand');
-const { log, isDebug } = require('../../utils');
-const { program }  = commander;
+import { program }  from 'commander';
+import path from 'node:path';
+import fse from 'fs-extra';
+import semver  from 'semver';
+import createInitCommand from '../../command/initCommand.js';
+import { log, isDebug } from '../../utils/index.js';
+import { dirname } from 'dirname-filename-esm';
+
 
 const LOWEST_NODE_VERSION = '18.0.0';
+
+const pkgPath = path.resolve(dirname(import.meta), '../../../package.json');
+
+const pkg = fse.readJSONSync(pkgPath);
 
 function checkNodeVerson() {
     if(!semver.gte(process.version, LOWEST_NODE_VERSION)) {
@@ -16,7 +22,7 @@ function checkNodeVerson() {
 function preAction() {
     checkNodeVerson();
 }
-module.exports = function(args) {
+export default function entry(args) {
     log.info(pkg.version);
     program
         .name(Object.keys(pkg.bin)[0])
