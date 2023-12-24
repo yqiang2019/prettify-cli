@@ -5,7 +5,7 @@ import { pathExistsSync } from 'path-exists';
 import { log } from '../utils/index.js';
 
 function getCacheFilePath(targetPath, template) {
-    return path.resolve(targetPath, 'node_modules', template.npmName, 'template');  
+    return path.resolve(targetPath, 'node_modules', template.npmName);  
 }
 function copyFile(targetPath, template, installDir) {
     const originFile = getCacheFilePath(targetPath, template);

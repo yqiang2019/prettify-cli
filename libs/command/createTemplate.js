@@ -10,7 +10,7 @@ const ADD_TEMPLATE = [
     {
         name: 'react',
         value: 'react-template',
-        npmName: 'react',
+        npmName: '@fontend-scaffolding/react-scaffolding',
         version: '1.0.0'
     },
     {
