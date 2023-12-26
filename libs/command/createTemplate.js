@@ -8,15 +8,15 @@ const ADD_TYPE_PROJECT = 'project';
 const ADD_TYPE_PAGE = 'page';
 const ADD_TEMPLATE = [
     {
-        name: 'react',
-        value: 'react-template',
-        npmName: '@fontend-scaffolding/react-scaffolding',
+        name: 'react-ts',
+        value: 'react-ts-template',
+        npmName: '@fe-scaffolding/react-scaffolding',
         version: '1.0.0'
     },
     {
-        name: 'vue',
-        value: 'vue-template',
-        npmName: 'vue',
+        name: 'library-ts',
+        value: 'library-ts-template',
+        npmName: '@fe-scaffolding/jslib-scaffolding',
         version: '1.0.0'
     },
 ];

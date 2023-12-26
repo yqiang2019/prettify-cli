@@ -1,9 +1,9 @@
 {
-  "name": "pretty-cli",
+  "name": "prettify-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "前端项目初始化命令行工具",
   "bin": {
-    "pretty-cli": "./libs/cli/bin/cli.js"
+    "prettify-cli": "./libs/cli/bin/cli.js"
   },
   "main": "./libs/cli/bin/cli.js",
   "type": "module",
