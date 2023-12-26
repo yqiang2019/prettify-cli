@@ -21,8 +21,7 @@ async function downloadAddTemplate(targetPath, template) {
     const { npmName, version } = template;
     const installName = 'npm';
     const installArgs = ['install', `${npmName}@${version}`];
-    const subprocess = execa(installName, installArgs, { cwd: targetPath });
-    await subprocess;
+    await execa(installName, installArgs, { cwd: targetPath });
 }
 export default async function downloadTemplate(selectedTemplate, opts) {
     const {targetPath, template } = selectedTemplate;

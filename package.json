@@ -1,6 +1,6 @@
 {
   "name": "prettify-cli",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "前端项目初始化命令行工具",
   "bin": {
     "prettify-cli": "./libs/cli/bin/cli.js"

@@ -3,7 +3,7 @@ import path from 'node:path';
 import { homedir } from 'node:os';
 import { makeList, makeInput, log, getLatestVersion } from '../utils/index.js';
 
-const TEMP_HOME = '.pretty-cli';
+const TEMP_HOME = '.prettify-cli';
 const ADD_TYPE_PROJECT = 'project';
 const ADD_TYPE_PAGE = 'page';
 const ADD_TEMPLATE = [

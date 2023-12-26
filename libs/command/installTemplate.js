@@ -1,11 +1,12 @@
 import fse from 'fs-extra';
+import { execa } from 'execa';
 import path from 'path';
 import ora from 'ora';
 import { pathExistsSync } from 'path-exists';
 import { log } from '../utils/index.js';
 
 function getCacheFilePath(targetPath, template) {
-    return path.resolve(targetPath, 'node_modules', template.npmName);  
+    return path.resolve(targetPath, 'node_modules', template.npmName, 'template');  
 }
 function copyFile(targetPath, template, installDir) {
     const originFile = getCacheFilePath(targetPath, template);
@@ -27,6 +28,7 @@ export default async function installTemplate(selectedTemplate, opts) {
     if(pathExistsSync(installDir) ) {
        if(!force) {
             log.error(`当前目录已存在${installDir}文件夹`)
+            return;
        }else {
             fse.removeSync(installDir);
             fse.ensureDirSync(installDir);
